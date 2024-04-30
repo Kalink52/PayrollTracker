@@ -1,8 +1,8 @@
 # PayrollTracker
 
 ## Usage
-[kalink52.github.io/portfolio/](https://kalink52.github.io/portfolio/)
-![alt text](./assets/pictures/HTMLCSS.png)
+[https://kalink52.github.io/PayrollTracker/](https://kalink52.github.io/PayrollTracker/)
+![alt text](./webpicture.png)
 
 ## Contributing
 
