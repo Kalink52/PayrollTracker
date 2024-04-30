@@ -19,7 +19,7 @@ while (!more){
 
 //get salary and check if empty
  let salary = Number(prompt(`Salary:`));
- 
+
  if (isNaN(salary)) {
    salary = Number(0);
  } 
@@ -42,54 +42,19 @@ if (confirm(`Do you want to log another employee?`)) {
 return employee_array
 }
 
-
-
-
-// is valid function
-function isValid(a) {
-
- if (a == '') {
-    if (confirm(`Empty field, try again?`)){
-      collectEmployees();
-    }
-    else{}
- } else {
-  return
- }
-
-}
-
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
-  // console.log(employeesArray.sss.salary)
-  // salary += employeesArray.i.salary
-
-
-
- 
   var salary = 0;
   for (let i = 0; i < employeesArray.length; i++) {
     salary = Number(salary) + Number(employeesArray[i].salary);
-    // salary += Number(employee_array[i].salary)
-  }
-
-  // console.log(employee_array.length)
-  // console.log(salary/(employeesArray.length))
   console.log(`The average salary between our ${employeesArray.length} employee(s) is $${salary/employeesArray.length}`)
-  
-  
-  
-  // return salary
-
 }
-
+}
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
   const randomEmployee = employeesArray[Math.floor(Math.random() * employee_array.length)];
-
-
   console.log(`Congratulations to ${randomEmployee.firstName} ${randomEmployee.lastName} 
   our random drawing winner`);
 
