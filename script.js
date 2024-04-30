@@ -8,18 +8,19 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 let employee_array = []
 
 const collectEmployees = function() {
-  // TODO: Get user input to create and return an array of employee objec
+  // TODO: Get user input to create and return an array of employee object
 more = false
 while (!more){
-//get first name and check if empty
+//get first name
   let firstName = prompt(`First name:`);
  
-//get last name and check if empty
+//get last name
  let lastName = prompt(`Last name:`);
 
-//get salary and check if empty
+//get salary 
  let salary = Number(prompt(`Salary:`));
 
+ //check if salary is or isnt a number and setting it to xero
  if (isNaN(salary)) {
    salary = Number(0);
  } 
@@ -48,13 +49,14 @@ const displayAverageSalary = function(employeesArray) {
   var salary = 0;
   for (let i = 0; i < employeesArray.length; i++) {
     salary = Number(salary) + Number(employeesArray[i].salary);
-  console.log(`The average salary between our ${employeesArray.length} employee(s) is $${salary/employeesArray.length}`)
 }
+
+console.log(`The average salary between our ${employeesArray.length} employee(s) is $${salary/employeesArray.length}`)
 }
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
-  const randomEmployee = employeesArray[Math.floor(Math.random() * employee_array.length)];
+  const randomEmployee = employeesArray[Math.floor(Math.random() * employee_array.length)]; //found math online formatted to fit code
   console.log(`Congratulations to ${randomEmployee.firstName} ${randomEmployee.lastName} 
   our random drawing winner`);
 
